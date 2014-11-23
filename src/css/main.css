@@ -1,0 +1,383 @@
+@charset "UTF-8";
+/* 
+	Variables
+ */
+/* 
+	Interface Générale
+ */
+.container {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  font-family: Abel;
+  position: relative;
+  z-index: 5;
+}
+.container #interface {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  -webkit-transition: top 1s ease;
+          transition: top 1s ease;
+  overflow: visible;
+  /* Animation */
+}
+.container #interface section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.container #interface.first {
+  top: 0;
+}
+.container #interface.second {
+  top: -100%;
+}
+.container #interface.third {
+  top: -200%;
+}
+.container #interface.fourth {
+  top: -300%;
+}
+
+/* 
+	Gestion du logo
+ */
+.logo, .loader {
+  text-align: center;
+}
+.logo span, .loader span {
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+  padding: 7px;
+  border-radius: 15px;
+  position: relative;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+.logo span.first, .loader span.first {
+  background-color: #2ecc71;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.logo span.second, .loader span.second {
+  background-color: #3498db;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.logo span.third, .loader span.third {
+  background-color: #f1c40f;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.logo span.fourth, .loader span.fourth {
+  background-color: #e67e22;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.logo span.fith, .loader span.fith {
+  background-color: #e74c3c;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.loader span {
+  -webkit-animation-name: loading;
+          animation-name: loading;
+}
+
+/* 
+	Formulaire d'upload
+ */
+#section-form h1 {
+  text-transform: uppercase;
+  font-size: 105px;
+  color: #2c3e50;
+  margin: auto;
+  text-align: center;
+}
+#section-form .form {
+  width: 300px;
+  margin: auto;
+  position: relative;
+  top: calc(50% - 150px);
+}
+#section-form .form .logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  position: relative;
+  left: -5px;
+  text-align: left;
+  custor: crosshair;
+}
+#section-form .form .logo span {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 20px !important;
+  font-size: 20px !important;
+  padding: 10px !important;
+  margin-left: 5px;
+  -webkit-transition: margin-right 0.3s ease;
+          transition: margin-right 0.3s ease;
+}
+#section-form .form .logo:hover span {
+  margin-right: 10px;
+}
+#section-form .form .form-group {
+  width: 100%;
+  margin-bottom: 70px;
+  margin-top: 50px;
+}
+#section-form .form .form-group .error {
+  position: relative;
+  top: -35px;
+  color: #e74c3c;
+  z-index: -10;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+}
+#section-form .form .form-group .error.active {
+  top: 0px;
+  margin-top: 20px;
+}
+#section-form .form .form-group label {
+  line-height: 1.4;
+  font-size: 15px;
+}
+#section-form .form .form-group .form-control {
+  display: block;
+  position: relative;
+}
+#section-form .form .form-group .form-control img {
+  display: block;
+  width: 15px;
+  height: 15px;
+  opacity: 0.5;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  z-index: 1000000000;
+  custor: pointer;
+}
+#section-form .form .form-group #hosted-images {
+  padding: 10px;
+  background-color: #ecf0f1;
+  cursor: pointer;
+  display: none;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+#section-form .form .form-group #hosted-images li {
+  height: 40px;
+  padding: 12px 20px;
+}
+#section-form .form .form-group #hosted-images li:hover {
+  background-color: #ffffff;
+}
+#section-form .form .form-group #hosted-images.active {
+  display: block;
+}
+#section-form .form input[type=text], #section-form .form input[type=url] {
+  display: block;
+  font-family: Abel;
+  width: 100%;
+  height: 40px;
+  margin-top: 16px;
+  border: none;
+  border-bottom: 2px solid #2c3e50;
+  font-size: 18px;
+  background-color: #ffffff;
+  color: #2c3e50;
+  position: relative;
+  z-index: 100000;
+}
+#section-form .form button {
+  display: inline-block;
+  position: relative;
+  font-family: Abel;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 2px solid #2c3e50;
+  padding: 10px 30px;
+  background: transparent;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+  outline: none;
+  z-index: 10;
+}
+#section-form .form button:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 0%;
+  height: 100%;
+  background-color: #2c3e50;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+  z-index: -10;
+}
+#section-form .form button:hover {
+  color: #ffffff;
+}
+#section-form .form button:hover:after {
+  width: 100%;
+}
+
+/* 
+	Precision
+ */
+#section-precision {
+  position: relative;
+}
+#section-precision .form {
+  margin: auto;
+  position: relative;
+  top: calc(50% - 50px);
+  width: 300px;
+  height: 100px;
+}
+#section-precision .form #precision-buttons {
+  margin-top: 20px;
+}
+#section-precision .form #precision-buttons button {
+  display: inline-block;
+  position: relative;
+  font-family: Abel;
+  font-size: 15px;
+  text-transform: uppercase;
+  border: 2px solid #2c3e50;
+  padding: 5px 10px;
+  background: transparent;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+  outline: none;
+  z-index: 10;
+  cursor: pointer;
+}
+#section-precision .form #precision-buttons button:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 0%;
+  height: 100%;
+  background-color: #2c3e50;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+  z-index: -10;
+  cursor: pointer;
+}
+#section-precision .form #precision-buttons button:hover {
+  color: #ffffff;
+}
+#section-precision .form #precision-buttons button:hover:after {
+  width: 100%;
+}
+
+/* 
+	Loader
+ */
+#section-loader .loader {
+  text-align: center;
+  position: relative;
+  top: 50%;
+}
+
+/* 
+	Dessin
+ */
+#section-draw {
+  position: relative;
+}
+#section-draw canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#section-draw #canvas-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+}
+#section-draw #canvas-buttons.active {
+  opacity: 1;
+}
+#section-draw #canvas-buttons .button {
+  display: inline-block;
+  position: relative;
+  margin-right: 20px;
+  font-family: Abel;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #2c3e50;
+  border: 2px solid #2c3e50;
+  padding: 10px 30px;
+  background: #ffffff;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+  outline: none;
+  z-index: 10;
+}
+#section-draw #canvas-buttons .button:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 0%;
+  height: 100%;
+  background-color: #2c3e50;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+  z-index: -10;
+}
+#section-draw #canvas-buttons .button:hover {
+  color: #ffffff;
+}
+#section-draw #canvas-buttons .button:hover:after {
+  width: 100%;
+}
+
+/* 
+	Animations
+ */
+/* Loading */
+@-webkit-keyframes loading {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 50px;
+  }
+}
+@keyframes loading {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 50px;
+  }
+}

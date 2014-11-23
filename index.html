@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rounds</title>
+	
+	<link rel="stylesheet" href="src/css/reset.css">
+	<link rel="stylesheet" href="src/css/main.css">
+
+</head>
+<body>
+
+	<div class="container">
+		<div id="interface" class="first">
+
+			<section id="section-form">
+				<div class="form">
+					<div class="logo">
+						<span class="first">R</span>
+						<span class="second">O</span>
+						<span class="third">U</span>
+						<span class="fourth">N</span>
+						<span class="fith">D</span>
+					</div>
+					<div class="form-group">
+						<label for="">Vous aussi devenez le nouveau Roy Lichtenstein en uploadant votre photo ou choisissez en une dans la liste à droite.</label>
+						<div class="form-control">
+							<input id="input-image" type="text" placeholder="http://">
+							<img id="btn-list" src="src/img/list.png" alt="" class="list">
+						</div>
+						<ul id="hosted-images">
+							<li attr-url="src/img/preuploads/wimbledon.jpg">Federer remporte Wimbledon</li>
+							<li attr-url="src/img/preuploads/rolandgarros.jpg">Federer remporte Roland Garros</li>
+						</ul>
+						<div class="error" id="error-image"></div>
+					</div>
+					<button id="btn-start">Valider</button>
+				</div>
+			</section>
+
+			<section id="section-precision">
+				<div class="form">
+					<label>Choisissez désormais un degré de précision</label>
+					<div id="precision-buttons">
+						<button data-precision="20">Basse</button>
+						<button data-precision="10">Moyenne</button>
+						<button data-precision="5">Elevée</button>
+					</div>
+				</div>
+			</section>
+			
+			<section id="section-loader">
+				<div class="loader">
+					<span class="first">L</span>
+					<span class="second">O</span>
+					<span class="third">A</span>
+					<span class="fourth">D</span>
+				</div>
+			</section>
+			
+			<section id="section-draw">
+				<canvas id="canvas-draw" width="960"></canvas>
+				<div id="canvas-buttons" class="active">
+					<a id="btn-reset" class="button">Recommencer</button>
+					<a id="btn-save" class="button" href="#" download="round.jpg">Sauvegarder</button>
+				</div>
+			</section>
+
+		</div>
+	</div>
+	
+</body>
+</html>
+
+
+<script src="src/js/init.js"></script>
+<script src="src/js/interface.js"></script>
+<script src="src/js/main.js"></script>
